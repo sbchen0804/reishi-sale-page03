@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>湧健康 靈芝蟲草益生菌 - 君臣佐使/調謢補 導購正式版 0515_1.0</title>
+    
+    <!-- 社群分享 Open Graph 標籤 -->
+    <meta property="og:title" content="湧健康 靈芝蟲草益生菌 - 全家人的健康補給站">
+    <meta property="og:description" content="獨家靈芝蟲草益生菌，採用君臣佐使調護補理論。科學配方、三重呵護，為全家人提供最完整的健康守護。">
+    <meta property="og:image" content="https://i.postimg.cc/Pr0rLBmn/yi-sheng-jun-zhu-shi-jue-051001.png">
+    <meta property="og:url" content="https://ogift.com.tw/">
+    <meta property="og:type" content="website">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+        
+        :root {
+            --primary-green: #2d4c1e;
+            --soft-green: #ccd5ae;
+            --warm-beige: #fefae0;
+            --earth-brown: #964b00;
+            --text-main: #1a240d;
+            --brand-red-brown: #7B241C; /* 靈芝深紅褐 */
+            --brand-gold: #FFEA00;      /* 閃耀純金黃 */
+        }
+
+        /* [核心背景] 固定背景圖 */
+        body::before, #redirect-overlay::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('https://i.postimg.cc/85RRXpKz/BG-page001.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            pointer-events: none;
+        }
+
+        body { 
+            font-family: 'Noto Sans TC', sans-serif; 
+            color: var(--text-main);
+            scroll-behavior: smooth;
+            background-color: var(--warm-beige); 
+            margin: 0;
+            padding: 0;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-blur: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            border-radius: 2rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+        }
+
+        /* 閃爍動畫 */
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        .animate-blink {
+            animation: blink 0.8s infinite;
+        }
+
+        /* 跳轉提示遮罩 */
+        #redirect-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-blur: 15px;
+        }
+
+        /* [按鈕設計] 紅褐背景 + 閃耀金字 */
+        .btn-brand-mall {
+            background-color: var(--brand-red-brown);
+            color: var(--brand-gold);
+            letter-spacing: 0.15em; 
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 12px 35px rgba(123, 36, 28, 0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(255, 234, 0, 0.4);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5); 
+            font-weight: 500 !important; 
+        }
+        .btn-brand-mall:hover {
+            background-color: #922b21;
+            transform: translateY(-4px);
+            box-shadow: 0 20px 45px rgba(123, 36, 28, 0.55);
+            border-color: rgba(255, 234, 0, 0.8);
+        }
+        .btn-brand-mall:active {
+            transform: scale(0.96);
+        }
+
+        /* [修正版] Banner 區塊設定：向下移動並確保不裁切 */
+        .new-top-banner {
+            position: relative;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+            background-color: var(--warm-beige);
+        }
+        @media (min-width: 768px) {
+            .new-top-banner {
+                max-width: 1400px;
+                max-height: 550px; 
+                padding-top: 40px;  
+                padding-bottom: 20px;
+                border-bottom-left-radius: 3rem;
+                border-bottom-right-radius: 3rem;
+                box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            }
+        }
+
+        .new-top-banner .banner-img {
+            width: 100%;
+            height: auto; 
+            display: block;
+            object-fit: contain; 
+        }
+
+        /* 跑馬燈 */
+        .marquee-box {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-blur: 8px;
+            padding: 10px 0;
+            overflow: hidden;
+            z-index: 20;
+            border-top: 1px solid rgba(150, 75, 0, 0.1);
+        }
+        .marquee-content {
+            display: flex;
+            width: max-content;
+            animation: marquee-seamless 50s linear infinite;
+        }
+        .marquee-text-block {
+            display: flex;
+            white-space: nowrap;
+        }
+        .marquee-text {
+            padding-right: 150px;
+            white-space: nowrap;
+            color: var(--earth-brown);
+            font-weight: 900;
+            font-size: 1.1rem;
+        }
+        @media (min-width: 768px) {
+            .marquee-text { font-size: 1.45rem; }
+        }
+        @keyframes marquee-seamless {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .nav-circle {
+            width: 95px; 
+            height: 95px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 3px solid #f2f2f2;
+            flex-shrink: 0;
+        }
+        @media (min-width: 768px) {
+            .nav-circle { width: 165px; height: 165px; border-width: 4px; } 
+        }
+        .nav-circle.active {
+            background: var(--primary-green);
+            color: white !important;
+            transform: scale(1.05);
+            border-color: var(--primary-green);
+        }
+
+        .manga-card {
+            background: white;
+            padding: 12px;
+            border-radius: 1.5rem;
+            box-shadow: 0 15px 45px rgba(0,0,0,0.07);
+            border: 1px solid #f2f2f2;
+            margin-bottom: 2.5rem;
+        }
+
+        .floating-home {
+            position: fixed;
+            bottom: 25px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: var(--earth-brown);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            z-index: 100;
+        }
+
+        .fade-in { animation: fadeInUp 0.8s ease-out forwards; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- 跳轉提示遮罩 (精確 4 秒跳轉) -->
+    <div id="redirect-overlay">
+        <div class="text-center px-6">
+            <i class="fa-solid fa-store text-6xl md:text-8xl text-[#bc6c25] mb-6 animate-bounce"></i>
+            <h2 class="text-3xl md:text-5xl font-black mb-4 tracking-wider animate-blink">歡迎進入專屬優惠方案</h2>
+            <p class="text-lg md:text-2xl font-bold text-[#1a240d] mb-6">即將為您跳轉至採購商城，請稍候...</p>
+            
+            <div class="glass-panel py-4 px-8 inline-block border border-stone-200">
+                <p class="text-xl md:text-2xl text-stone-700 font-medium tracking-wide">
+                    歡迎利用「LINE 客服中心」進行諮詢
+                </p>
+            </div>
+
+            <div class="mt-12 flex gap-3 justify-center">
+                <div class="w-4 h-4 bg-[#7B241C] rounded-full animate-pulse"></div>
+                <div class="w-4 h-4 bg-[#7B241C] rounded-full animate-pulse" style="animation-delay: 0.2s"></div>
+                <div class="w-4 h-4 bg-[#7B241C] rounded-full animate-pulse" style="animation-delay: 0.4s"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home 按鈕 -->
+    <a href="javascript:void(0)" onclick="goHomeFocus()" class="floating-home hover:scale-110 active:scale-95 transition-transform shadow-2xl">
+        <i class="fa-solid fa-house text-xl"></i>
+    </a>
+
+    <!-- Sticky Nav -->
+    <nav id="top-nav" class="sticky top-0 z-50 bg-white/95 backdrop-blur-md px-4 py-3 md:px-10 md:py-4 flex justify-between items-center border-b border-stone-100 shadow-xl">
+        <div class="flex items-center">
+            <a href="javascript:void(0)" onclick="goHomeFocus()" class="flex items-center">
+                <img src="https://i.postimg.cc/5NJmcN7t/yong-ling-zhilogo-heng-02-png.webp" alt="湧健康 Logo" class="h-10 md:h-14 w-auto object-contain">
+            </a>
+        </div>
+        <button onclick="handleStoreRedirect()" 
+           class="btn-brand-mall px-5 py-2 md:px-8 md:py-3 rounded-full text-base md:text-xl font-normal">
+           <i class="fa-solid fa-cart-shopping mr-3"></i> 專屬採購商城
+        </button>
+    </nav>
+
+    <!-- TOP 主視覺區：加入 Padding-top 確保商品不被裁切並下移 -->
+    <section class="w-full bg-stone-50/10 py-0 md:pb-8">
+        <div class="new-top-banner">
+            <img src="https://i.postimg.cc/Pr0rLBmn/yi-sheng-jun-zhu-shi-jue-051001.png" class="banner-img" alt="全新主視覺">
+            
+            <!-- 跑馬燈 -->
+            <div id="marquee-anchor" class="marquee-box">
+                <div class="marquee-content">
+                    <div class="marquee-text-block">
+                        <span class="marquee-text">🌸 一份給媽媽的心意，一份全家人的健康守護</span>
+                        <span class="marquee-text">🌸 一份給媽媽的心意，一份全家人的健康守護</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 互動內容導覽區 -->
+    <section id="interactive-content" class="relative z-20 container mx-auto px-4 md:px-10 py-6 md:py-8">
+        <div class="flex justify-center gap-4 md:gap-16 lg:gap-24 flex-nowrap overflow-x-hidden mb-8 md:mb-12">
+            <div onclick="switchSection('comic')" id="circle-comic" class="nav-circle active text-stone-700">
+                <i class="fa-solid fa-face-smile text-2xl md:text-4xl mb-1"></i>
+                <span class="text-xs md:text-lg font-bold">漫畫<br>輕鬆看</span>
+            </div>
+            <div onclick="switchSection('video')" id="circle-video" class="nav-circle text-stone-700">
+                <i class="fa-solid fa-circle-play text-2xl md:text-4xl mb-1"></i>
+                <span class="text-xs md:text-lg font-bold">短影音<br>資訊</span>
+            </div>
+            <div onclick="switchSection('summary')" id="circle-summary" class="nav-circle text-stone-700">
+                <i class="fa-solid fa-book-open text-2xl md:text-4xl mb-1"></i>
+                <span class="text-xs md:text-lg font-bold">一頁<br>懶人包</span>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-2 md:px-0">
+            <!-- 內容區：漫畫 -->
+            <div id="display-comic" class="display-content fade-in">
+                <div class="flex flex-col items-center max-w-2xl mx-auto">
+                    <div class="w-full manga-card"><img src="https://i.postimg.cc/C1VyTTcg/03-man-hua01-ling-zhi-chong-cao-yi-s_jun-1280.jpg" class="w-full h-auto rounded-lg md:rounded-2xl"></div>
+                    <div class="w-full manga-card"><img src="https://i.postimg.cc/zXPnGT9q/05-EDM-ling-zhi-chong-cao-yi-sheng-jun-04.png" class="w-full h-auto rounded-lg md:rounded-2xl"></div>
+                    <div class="w-full manga-card"><img src="https://i.postimg.cc/CL6jxbWV/05-EDM-ling-zhi-chong-cao-yi-sheng-jun-DM-01.png" class="w-full h-auto rounded-lg md:rounded-2xl"></div>
+                </div>
+            </div>
+
+            <!-- 內容區：短影音 -->
+            <div id="display-video" class="display-content hidden fade-in">
+                <div class="flex flex-col items-center max-w-4xl mx-auto">
+                    <div class="w-full glass-panel p-6 md:p-10 text-center shadow-xl border-4 border-white mb-20">
+                        <h2 class="text-3xl md:text-4xl font-black text-stone-900 mb-6 tracking-tight">短影音健康資訊</h2>
+                        <div class="bg-white p-1 rounded-[1.5rem] shadow-xl border-2 border-stone-50 overflow-hidden">
+                            <div class="aspect-video">
+                                <iframe class="w-full h-full rounded-[1.2rem]" 
+                                        src="https://www.youtube.com/embed/0w0Oo2IfdQA?rel=0" 
+                                        title="湧健康 靈芝蟲草益生菌" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 一頁懶人包內容 -->
+            <div id="display-summary" class="display-content hidden fade-in space-y-8 md:space-y-12">
+                <div class="glass-panel p-4 md:p-6 overflow-hidden border-2 md:border-4 border-white shadow-xl">
+                    <img src="https://i.postimg.cc/2S23SGsD/02-zi-xun-tu-biao-01-ling-zhi-chong-cao-yi-sheng-jun-1.png" alt="產品特色" class="w-full h-auto rounded-[1.5rem] md:rounded-[2rem]">
+                </div>
+                <div class="glass-panel p-4 md:p-6 overflow-hidden border-2 md:border-4 border-white shadow-xl">
+                    <img src="https://i.postimg.cc/Gmq9mKW1/02-zi-xun-tu-biao-02-ling-zhi-chong-cao-yi-sheng-jun-1.png" alt="君臣佐使理論" class="w-full h-auto rounded-[1.5rem] md:rounded-[2rem]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 訂購區 -->
+    <section id="purchase" class="py-12 md:py-20 container mx-auto px-6">
+        <div class="max-w-3xl mx-auto glass-panel p-8 md:p-16 text-center shadow-2xl border-4 border-white">
+            <h2 class="text-4xl md:text-5xl font-black text-stone-900 mb-8 tracking-tight">專屬優購方案</h2>
+            
+            <h3 class="text-2xl md:text-4xl font-black text-stone-900 mb-6">靈芝蟲草益生菌膠囊</h3>
+            <div class="text-5xl md:text-7xl font-black text-[#bc6c25] tracking-tighter mb-12">$4,500 <span class="text-xl md:text-2xl font-bold text-stone-400">元</span></div>
+            
+            <button onclick="handleStoreRedirect()" 
+               class="btn-brand-mall w-full py-6 md:py-10 rounded-[2.5rem] md:rounded-[4rem] text-3xl md:text-4xl font-normal">
+                <i class="fa-solid fa-cart-shopping mr-6"></i> 專屬採購商城
+            </button>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="py-12 md:py-20 bg-[#1a240d] text-stone-500 text-center border-t-8 border-[#2d4c1e]">
+        <div class="container mx-auto px-10">
+            <div class="text-white font-black text-2xl md:text-3xl mb-6 tracking-[0.4em] uppercase text-center">Ogift 湧健康</div>
+            <p class="text-xs md:text-base tracking-[0.5em] opacity-40 uppercase font-black text-center">© 2026 OGIFT AMITOS INC. | 您的健康專家</p>
+        </div>
+    </footer>
+
+    <script>
+        // 商城跳轉邏輯
+        function handleStoreRedirect() {
+            const overlay = document.getElementById('redirect-overlay');
+            const storeUrl = "https://ogift.com.tw/product/reishi-cordyceps-probiotics-capsules-3-pack/";
+            
+            overlay.style.display = 'flex';
+            
+            setTimeout(() => {
+                const newWindow = window.open(storeUrl, '_blank');
+                if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+                    window.location.href = storeUrl;
+                }
+                
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                }, 500);
+            }, 4000);
+        }
+
+        function goHomeFocus() {
+            const marquee = document.getElementById('marquee-anchor');
+            const nav = document.getElementById('top-nav');
+            if(marquee && nav) {
+                const navHeight = nav.offsetHeight; 
+                const targetPos = marquee.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                window.scrollTo({ top: targetPos, behavior: 'smooth' });
+            }
+        }
+
+        function switchSection(id) {
+            document.querySelectorAll('.display-content').forEach(el => el.classList.add('hidden'));
+            const targetContent = document.getElementById('display-' + id);
+            if(targetContent) {
+                targetContent.classList.remove('hidden');
+            }
+
+            document.querySelectorAll('.nav-circle').forEach(el => el.classList.remove('active'));
+            const targetCircle = document.getElementById('circle-' + id);
+            if(targetCircle) targetCircle.classList.add('active');
+
+            document.getElementById('interactive-content').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
